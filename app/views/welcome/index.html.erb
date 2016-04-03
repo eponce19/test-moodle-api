@@ -1,4 +1,5 @@
 <h1>Moodle test web service</h1>
+<% if @message.nil? %>
 <p>
   <b>Search all users: </b>
 <br>
@@ -6,19 +7,25 @@
 </p>
 
 <p>
-  <b>Search User (3) : </b>
+  <b>Authenthicated User  : </b>
 <br>
   <i>Array: <%= @user%></i>
 </p>
 
 <p>
-  <b>Search courses User (3) :</b>
+  <b>Search courses User (5) :</b>
 <br>
   <i>Array: <%= @courses%></i>
 </p>
 
 <p>
-  <b>Search users of courses (2) : </b>
+  <b>Search users of courses (5) : </b>
 <br>
   <i>Array: <%= @course_users%></i>
 </p>
+
+<% else %>
+
+<h3><%= @message %></h3>
+
+<% end %>
